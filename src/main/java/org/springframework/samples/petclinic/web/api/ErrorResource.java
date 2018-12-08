@@ -1,5 +1,5 @@
 package org.springframework.samples.petclinic.web.api;
-import java.util.Hashtable;
+// import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -42,12 +42,12 @@ public class ErrorResource {
 					this.fieldErrors.put(fieldErrorResource.getField(), fieldErrorResource);
 				}
     }
-    
+
     public void addGlobalError(String message) {
     	if (globalErrors == null) {
     		globalErrors = new LinkedList<String>();
     	}
-    	
+
     	globalErrors.add(message);
     }
 }

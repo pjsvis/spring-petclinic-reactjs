@@ -3,7 +3,7 @@ import { IRouter } from 'react-router';
 // ------------------------------------ ROUTER ------------------------------------
 export interface IRouterContext {
   router: IRouter;
-};
+}
 
 // ------------------------------------ UTIL --------------------------------------
 export type IHttpMethod = 'POST' | 'PUT' | 'GET';
@@ -17,7 +17,7 @@ export interface IFieldError {
 
 interface IFieldErrors {
   [index: string]: IFieldError;
-};
+}
 
 export interface IError {
   fieldErrors: IFieldErrors;
@@ -35,14 +35,14 @@ export type IInputChangeHandler = (name: string, value: string, error: IFieldErr
 export interface ISelectOption {
   value: string|number;
   name: string;
-};
+}
 
 // ------------------------------------ MODEL .------------------------------------
 
 interface IBaseEntity {
   id: number;
   isNew: boolean;
-};
+}
 
 interface INamedEntity extends IBaseEntity {
   name: string;
@@ -56,10 +56,10 @@ interface IPerson extends IBaseEntity {
 export interface IVisit extends IBaseEntity {
   date: Date;
   description: string;
-};
+}
 
 export interface IPetType extends INamedEntity {
-};
+}
 
 export type IPetTypeId = number;
 
@@ -67,7 +67,7 @@ export interface IPet extends INamedEntity {
   birthDate: Date;
   type: IPetType;
   visits: IVisit[];
-};
+}
 
 // TODO
 export interface IEditablePet extends INamedEntity {
@@ -87,11 +87,11 @@ export interface IOwner extends IPerson {
   city: string;
   telephone: string;
   pets: IPet[];
-};
+}
 
 export interface ISpecialty extends INamedEntity {
-};
+}
 
 export interface IVet extends IPerson {
   specialties: ISpecialty[];
-};
+}
